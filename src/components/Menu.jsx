@@ -7,7 +7,7 @@ import FavoriteContext from "./contexts/favoritesContext";
 const { useContext } = React;
 
 const Menu = () => {
-    const { favoritePokemons } = useContext(FavoriteContext);
+    const { favoriteMovies } = useContext(FavoriteContext);
     return (
       <div >
           <Navbar className="bg-light justify-content-between" id='cabeza' bg="light" expand="lg">
@@ -18,7 +18,7 @@ const Menu = () => {
               <Nav className="me-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/favorite">Favoritos</Nav.Link>
-          <div>&#10084;&#65039; {favoritePokemons.length}</div>
+          <div>&#10084;&#65039; {favoriteMovies.length}</div>
           </Nav>
           </Navbar.Collapse>
          </Container>

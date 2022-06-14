@@ -12,17 +12,17 @@ import {
 
 
 const CharacterCard = ({ info }) => {
-  const { favoritePokemons, updateFavoritePokemons } = useContext(
+  const { favoriteMovies, updateFavoriteMovies } = useContext(
     FavoriteContext
   );
 
   const redHeart = "❤️";
   const blackHeart = "🖤";
-  const heart = favoritePokemons.includes(info.name) ? redHeart : blackHeart;
+  const heart = favoriteMovies.includes(info.name) ? redHeart : blackHeart;
 
   const clickHeart = (e) => {
     e.preventDefault();
-    updateFavoritePokemons(info.name);
+    updateFavoriteMovies(info.name);
   };
 
 
@@ -58,7 +58,7 @@ const CharacterCard = ({ info }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={clickHeart} className="pokemon-heart-btn">
+        <Button onClick={clickHeart}>
           <div>{heart}</div>
         </Button>
       </CardActions>

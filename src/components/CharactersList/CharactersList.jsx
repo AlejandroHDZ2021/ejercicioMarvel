@@ -43,7 +43,7 @@ const CharactersList = () => {
 
 
 
-  const updateFavoritePokemons = (name) => {
+  const updateFavoriteMovies = (name) => {
     const updated = [...favorites];
     const isFavorite = updated.indexOf(name);
     if (isFavorite >= 0) {
@@ -58,8 +58,8 @@ const CharactersList = () => {
   return (
     <FavoriteProvider
       value={{
-        favoritePokemons: favorites,
-        updateFavoritePokemons: updateFavoritePokemons
+        favoriteMovies: favorites,
+        updateFavoriteMovies: updateFavoriteMovies
       }}
     >
       <section>
