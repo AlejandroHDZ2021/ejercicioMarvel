@@ -40,13 +40,26 @@ const CharacterCard = ({ info }) => {
         <Typography gutterBottom variant="h5" component="div">
           {info.name}
         </Typography>
-        <Typography gutterBottom variant="h4" component="div">
-          {info.events.items.name}
+        <Typography gutterBottom variant="h5" component="div">
+          <div><h6>List Events:</h6></div>
+
+        </Typography>
+        <Typography gutterBottom variant="h6" component="div">
+
+          <div>
+            {info.events.available >= 1 ? info.events.items[0].name : 'No tiene eventos'}
+          </div>
+          <div>
+            {info.events.available >= 2 ? info.events.items[1].name : ''}
+          </div>
+          <div>
+            {info.events.available >= 3 ? info.events.items[2].name : ''}
+          </div>
         </Typography>
       </CardContent>
       <CardActions>
-      <Button onClick={clickHeart} className="pokemon-heart-btn">
-          <div className="pokemon-favorite">{heart}</div>
+        <Button onClick={clickHeart} className="pokemon-heart-btn">
+          <div>{heart}</div>
         </Button>
       </CardActions>
     </Card>

@@ -12,7 +12,7 @@ const App = ({ defaultValue = [] }) => {
       <header className="App-header">
           <Routes>
             <Route path="/" element={<CharactersList />} />
-            <Route path="alive" element={<Favorite />} />
+            <Route path="favorite" element={<Favorite />} />
           </Routes>
           </header>
     </div>
